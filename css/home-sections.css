@@ -1,0 +1,876 @@
+/* Home Sections Specific Styles for Chhath Utsav Mahasangh */
+
+/* Hero Section Enhancements */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-section .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Countdown Timer Styling */
+#countdown-timer {
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(10px); */
+    /* border-radius: 1rem; */
+    /* padding: 2rem; */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+#countdown-timer .time-block {
+    text-align: center;
+    padding: 1rem;
+}
+
+#countdown-timer .time-val {
+    font-size: 3rem;
+    font-weight: 800;
+    display: block;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#countdown-timer .time-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+/* About Section */
+.about-section {
+    padding: 5rem 0;
+}
+
+.about-section img {
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.about-section img:hover {
+    transform: scale(1.02);
+}
+
+/* Founder Message Section */
+.founder-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 5rem 0;
+}
+
+.founder-image {
+    border-radius: 1rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.gallery-img-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 1;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-img-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-img-container:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-img-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 60%,
+        rgba(0,0,0,0.8) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-img-container:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-img-container .overlay h6 {
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Events Section */
+.events-section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.event-date {
+    background: var(--brand-orange, #F97316);
+    color: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    min-width: 80px;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.blog-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+
+.blog-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Get Involved Section */
+.involved-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 1rem;
+    background: white;
+}
+
+.involved-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 2rem 0;
+        padding-top: 7rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #countdown-timer .time-val {
+        font-size: 2rem;
+    }
+    #countdown-timer .time-block {
+        text-align: center;
+        padding: 0px;
+    }
+    #countdown-timer .time-label {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+#countdown-timer .time-block {
+    line-height: 1;
+    flex: 1;
+}
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    #countdown-timer .time-val {
+        font-size: 1.5rem;
+    }
+}
+/* Additional CSS for New Homepage Sections */
+
+/* News & Updates Section */
+#news-updates {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+#news-updates .blog-card {
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    height: 100%;
+}
+
+#news-updates .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    text-decoration: none;
+}
+
+#news-updates .card-body {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#news-updates .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#news-updates .card-text {
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Media Coverage / In the News Section */
+#media-coverage {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.newspaper-clipping {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.newspaper-clipping:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.newspaper-clipping img {
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.newspaper-clipping:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.newspaper-clipping h6 {
+    color: var(--brand-dark);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.newspaper-clipping p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Community Reels Section */
+#reels {
+    padding: 5rem 0;
+    background: #1a1a1a;
+    color: white;
+}
+
+#reels h2 {
+    color: white;
+}
+
+#reels .lead {
+    color: rgba(255,255,255,0.7);
+}
+
+.reel-item {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.reel-item:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.05);
+}
+
+.reel-container {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    min-height: 300px;
+}
+
+.reel-container:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.reel-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.reel-overlay .bi-play-circle-fill {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.reel-item:hover .bi-play-circle-fill {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.reel-overlay h6 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+}
+
+.reel-overlay small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Blog Section with Orange Cards */
+#blog .blog-card {
+    /* background: #F97316 !important; */
+    color: white;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(249,115,22,0.3);
+}
+
+#blog .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(249,115,22,0.4);
+    text-decoration: none;
+}
+
+#blog .blog-card .card-body {
+    padding: 2rem;
+    color: white;
+}
+
+#blog .blog-card .card-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#blog .blog-card h6 {
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#blog .blog-card .card-text {
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+}
+
+#blog .blog-card .badge {
+    background: rgba(255,255,255,0.2) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+#blog .blog-card a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#blog .blog-card a:hover {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+    .reel-container {
+        margin-bottom: 1rem;
+        min-height: 250px;
+    }
+
+    #reels .row {
+        justify-content: center;
+    }
+
+    .newspaper-clipping img {
+        height: 250px;
+    }
+
+    #news-updates .card-title {
+        font-size: 1.25rem;
+    }
+
+    .reel-overlay {
+        padding: 1rem;
+    }
+
+    .reel-overlay .bi-play-circle-fill {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .newspaper-clipping img {
+        height: 200px;
+    }
+
+    .reel-container {
+        min-height: 200px;
+    }
+
+    #news-updates .card-body {
+        padding: 1.5rem;
+    }
+}
+/* Additional CSS for New Homepage Sections */
+
+/* News & Updates Section */
+#news-updates {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+#news-updates .blog-card {
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    height: 100%;
+}
+
+#news-updates .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    text-decoration: none;
+}
+
+#news-updates .card-body {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#news-updates .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#news-updates .card-text {
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Media Coverage / In the News Section */
+#media-coverage {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.newspaper-clipping {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.newspaper-clipping:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.newspaper-clipping img {
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.newspaper-clipping:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.newspaper-clipping h6 {
+    color: var(--brand-dark);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.newspaper-clipping p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Community Reels Section */
+#reels {
+    padding: 5rem 0;
+    background: #1a1a1a;
+    color: white;
+}
+
+#reels h2 {
+    color: white;
+}
+
+#reels .lead {
+    color: rgba(255,255,255,0.7);
+}
+
+.reel-item {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.reel-item:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.05);
+}
+
+.reel-container {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    min-height: 300px;
+}
+
+.reel-container:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+.reel-container img{
+    width: 100%;
+}
+.reel-overlay {
+   position: absolute;
+    z-index: 10;
+    height: 100%;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+        background: #00000061;
+}
+
+.reel-overlay .bi-play-circle-fill {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.reel-item:hover .bi-play-circle-fill {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.reel-overlay h6 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+}
+
+.reel-overlay small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Blog Section with Orange Cards */
+#blog .blog-card {
+    /* background: #F97316 !important; */
+    color: white;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(249,115,22,0.3);
+}
+
+#blog .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(249,115,22,0.4);
+    text-decoration: none;
+}
+
+#blog .blog-card .card-body {
+    padding: 2rem;
+    color: #1e293b;
+}
+
+#blog .blog-card .card-title {
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#blog .blog-card h6 {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#blog .blog-card .card-text {
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+#blog .blog-card .badge {
+    background: #f97316 !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+#blog .blog-card a {
+    color: #1e293b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#blog .blog-card a:hover {
+    color: #1e293b;
+    font-weight: 800!important;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+    .reel-container {
+        margin-bottom: 1rem;
+        min-height: 250px;
+    }
+
+    #reels .row {
+        justify-content: center;
+    }
+
+    .newspaper-clipping img {
+        height: 250px;
+    }
+
+    #news-updates .card-title {
+        font-size: 1.25rem;
+    }
+
+    .reel-overlay {
+        padding: 1rem;
+    }
+
+    .reel-overlay .bi-play-circle-fill {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .newspaper-clipping img {
+        height: 200px;
+    }
+
+    .reel-container {
+        min-height: 200px;
+    }
+
+    #news-updates .card-body {
+        padding: 1.5rem;
+    }
+}
+/* Media Coverage / In the News Section */
+#media-coverage {
+    padding: 5rem 0;
+    background: #fff;
+}
+.newspaper-clipping {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+.newspaper-clipping {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.newspaper-clipping:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: inherit;
+}
+
+.newspaper-clipping img {
+    transition: transform 0.3s ease;
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #f3f4f6;
+}
+
+.newspaper-clipping:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.newspaper-clipping h6 {
+    color: var(--brand-dark, #1E293B);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.newspaper-clipping p {
+    color: #666;
+    font-size: 0.9rem;
+}
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+    
+    .newspaper-clipping img {
+        height: 250px;
+    }
+
+}
+
+.reels-container {
+    display: flex
+;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+        justify-content: center;
+}
+.reel-item {
+    flex: 0 0 auto;
+    width: 180px;
+    aspect-ratio: 9 / 16;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.reel-item img{
+    width: 100%;
+}
+@media (max-width: 576px) {
+    .newspaper-clipping img {
+        height: 200px;
+    }
+.reels-container{
+    justify-content: flex-start;
+}
+}

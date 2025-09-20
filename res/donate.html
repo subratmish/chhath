@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Chhath Utsav Mahasangh - Help us preserve traditions and serve the community with your generous contribution">
+    <title>Donate - Support Chhath Puja Celebrations | Chhath Utsav Mahasangh</title>
+
+    <!-- Core CSS (required for all pages) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/utilities.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/donation.css">
+    <link rel="stylesheet" href="css/forms.css">
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Chhath Utsav Mahasangh</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="about-chhath.html">About Chhath</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="active btn btn-secondary btn-sm">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item">Donate</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Support Our Mission</h1>
+                <p>Help us preserve traditions and serve the community with your generous contribution</p>
+            </div>
+        </section>
+
+        <!-- Impact Message -->
+        <section class="section">
+            <div class="container">
+                <div class="card bg-primary text-white text-center">
+                    <div class="card-body">
+                        <h2 class="card-title text-white mb-4">Every Contribution Makes a Difference</h2>
+                        <p class="text-white text-lg">Every contribution helps us create safer, more inclusive, and environmentally conscious celebrations for thousands of devotees.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Form -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2">
+                    <!-- Donation Amount Selection -->
+                    <div>
+                        <div class="donation-form">
+                            <h3>Choose Donation Amount</h3>
+
+                            <div class="donation-amounts">
+                                <button class="amount-btn" data-amount="500">₹500</button>
+                                <button class="amount-btn popular" data-amount="1000">₹1,000</button>
+                                <button class="amount-btn" data-amount="2500">₹2,500</button>
+                                <button class="amount-btn" data-amount="5000">₹5,000</button>
+                                <button class="amount-btn" data-amount="10000">₹10,000</button>
+                                <button class="amount-btn" data-amount="25000">₹25,000</button>
+                            </div>
+
+                            <div class="custom-amount">
+                                <label for="custom-amount">Custom Amount:</label>
+                                <input type="number" id="custom-amount" placeholder="Enter amount" min="100">
+                            </div>
+
+                            <form id="donation-form">
+                                <div class="donor-info">
+                                    <h4>Your Information</h4>
+                                    <div class="form-row two-columns">
+                                        <div class="form-group">
+                                            <label for="donor-name" class="form-label required">Full Name</label>
+                                            <input type="text" id="donor-name" name="donor-name" class="form-input" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donor-email" class="form-label required">Email</label>
+                                            <input type="email" id="donor-email" name="donor-email" class="form-input" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row two-columns">
+                                        <div class="form-group">
+                                            <label for="donor-phone" class="form-label">Phone</label>
+                                            <input type="tel" id="donor-phone" name="donor-phone" class="form-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donor-city" class="form-label">City</label>
+                                            <input type="text" id="donor-city" name="donor-city" class="form-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="checkbox-group">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="anonymous" name="anonymous" class="form-check-input">
+                                            <label for="anonymous" class="form-check-label">Make this donation anonymous</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" id="receipt" name="receipt" class="form-check-input" checked>
+                                            <label for="receipt" class="form-check-label">Send me a donation receipt</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" id="updates" name="updates" class="form-check-input">
+                                            <label for="updates" class="form-check-label">Subscribe to festival updates</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="donation-message" class="form-label">Message (Optional)</label>
+                                    <textarea id="donation-message" name="donation-message" class="form-textarea" rows="3" placeholder="Add a personal message or dedication..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full btn-lg">
+                                    Proceed to Payment
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Impact Information -->
+                    <div>
+                        <h3>Your Impact</h3>
+                        <div class="impact-card" id="impact-display">
+                            <h4>₹1,000 can provide:</h4>
+                            <ul>
+                                <li>✓ Safety equipment for 5 volunteers</li>
+                                <li>✓ First aid supplies for medical station</li>
+                                <li>✓ Lighting for 50 meters of ghat area</li>
+                                <li>✓ Eco-friendly materials for decorations</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h4 class="card-title">What We Use Donations For</h4>
+                            <div class="card-body">
+                                <div class="expense-item">
+                                    <span class="expense-label">Infrastructure & Safety</span>
+                                    <div class="expense-bar">
+                                        <div class="expense-fill" style="width: 40%"></div>
+                                    </div>
+                                    <span class="expense-percentage">40%</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span class="expense-label">Medical & Security</span>
+                                    <div class="expense-bar">
+                                        <div class="expense-fill" style="width: 25%"></div>
+                                    </div>
+                                    <span class="expense-percentage">25%</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span class="expense-label">Environmental Programs</span>
+                                    <div class="expense-bar">
+                                        <div class="expense-fill" style="width: 20%"></div>
+                                    </div>
+                                    <span class="expense-percentage">20%</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span class="expense-label">Community Outreach</span>
+                                    <div class="expense-bar">
+                                        <div class="expense-fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="expense-percentage">10%</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span class="expense-label">Administrative</span>
+                                    <div class="expense-bar">
+                                        <div class="expense-fill" style="width: 5%"></div>
+                                    </div>
+                                    <span class="expense-percentage">5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="payment-methods">
+                    <h3>Choose Payment Method</h3>
+                    <div class="payment-grid">
+                        <div class="payment-option" data-method="upi">
+                            <div class="payment-icon">📱</div>
+                            <div class="payment-label">UPI Payment</div>
+                            <p class="text-sm text-light">Google Pay, PhonePe, Paytm</p>
+                        </div>
+
+                        <div class="payment-option" data-method="card">
+                            <div class="payment-icon">💳</div>
+                            <div class="payment-label">Credit/Debit Card</div>
+                            <p class="text-sm text-light">Visa, MasterCard, RuPay</p>
+                        </div>
+
+                        <div class="payment-option" data-method="netbanking">
+                            <div class="payment-icon">🏦</div>
+                            <div class="payment-label">Net Banking</div>
+                            <p class="text-sm text-light">All major banks</p>
+                        </div>
+
+                        <div class="payment-option" data-method="wallet">
+                            <div class="payment-icon">👛</div>
+                            <div class="payment-label">Digital Wallet</div>
+                            <p class="text-sm text-light">Paytm, Mobikwik, etc.</p>
+                        </div>
+
+                        <div class="payment-option" data-method="paypal">
+                            <div class="payment-icon">🌍</div>
+                            <div class="payment-label">PayPal</div>
+                            <p class="text-sm text-light">International donors</p>
+                        </div>
+
+                        <div class="payment-option" data-method="bank">
+                            <div class="payment-icon">🏪</div>
+                            <div class="payment-label">Bank Transfer</div>
+                            <p class="text-sm text-light">RTGS/NEFT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR Code Section -->
+        <section class="section" id="qr-section" style="display: none;">
+            <div class="container">
+                <div class="qr-code">
+                    <h3>Scan QR Code to Donate</h3>
+                    <div class="qr-placeholder">
+                        <p>QR Code for UPI Payment</p>
+                    </div>
+                    <div class="upi-id">chhathutsav@paytm</div>
+                    <p>Scan with any UPI app to make instant donation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stories -->
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title">See Your Impact in Action</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">🏗️</div>
+                        <h3 class="impact-title">Safe Infrastructure</h3>
+                        <p class="impact-description">Safe ghat construction, lighting, and facilities for devotees to ensure a secure and comfortable celebration experience.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon">🏥</div>
+                        <h3 class="impact-title">Medical Support</h3>
+                        <p class="impact-description">Medical aid stations, security, and emergency response teams available 24/7 during the festival period.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon">🌱</div>
+                        <h3 class="impact-title">Environmental Care</h3>
+                        <p class="impact-description">Eco-friendly initiatives and beach cleanup programs to protect our natural environment and water bodies.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="impact-title">Community Programs</h3>
+                        <p class="impact-description">Educational workshops, cultural activities, and year-round community welfare programs for all age groups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transparency Section -->
+        <section class="transparency-section">
+            <div class="container">
+                <h2 class="section-title">Financial Transparency</h2>
+                <p class="section-subtitle">See exactly how your donations are utilized</p>
+
+                <div class="transparency-chart">
+                    <h3>2024 Fund Utilization</h3>
+
+                    <div class="expense-item">
+                        <span class="expense-label">Ghat Construction & Maintenance</span>
+                        <div class="expense-bar">
+                            <div class="expense-fill" style="width: 30%"></div>
+                        </div>
+                        <span class="expense-percentage">30%</span>
+                    </div>
+
+                    <div class="expense-item">
+                        <span class="expense-label">Safety & Security</span>
+                        <div class="expense-bar">
+                            <div class="expense-fill" style="width: 25%"></div>
+                        </div>
+                        <span class="expense-percentage">25%</span>
+                    </div>
+
+                    <div class="expense-item">
+                        <span class="expense-label">Environmental Initiatives</span>
+                        <div class="expense-bar">
+                            <div class="expense-fill" style="width: 20%"></div>
+                        </div>
+                        <span class="expense-percentage">20%</span>
+                    </div>
+
+                    <div class="expense-item">
+                        <span class="expense-label">Community Welfare</span>
+                        <div class="expense-bar">
+                            <div class="expense-fill" style="width: 15%"></div>
+                        </div>
+                        <span class="expense-percentage">15%</span>
+                    </div>
+
+                    <div class="expense-item">
+                        <span class="expense-label">Administrative Costs</span>
+                        <div class="expense-bar">
+                            <div class="expense-fill" style="width: 10%"></div>
+                        </div>
+                        <span class="expense-percentage">10%</span>
+                    </div>
+
+                    <div class="text-center mt-6">
+                        <a href="#" class="btn btn-outline">Download Annual Report</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="security-section">
+            <div class="container">
+                <div class="security-badge">
+                    <span class="security-icon">🔒</span>
+                    <span>100% Secure Donations</span>
+                </div>
+                <p class="security-text">All donations are processed through secure, encrypted payment gateways. We never store your payment information, and all transactions are protected by industry-standard security measures.</p>
+                <p class="security-text"><strong>Important:</strong> We will never ask for your payment details via phone or email. Always ensure you're on our official website (chhathutsav.org) before making any donation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chhath Utsav Mahasangh</h3>
+                    <p>Your support helps us preserve sacred traditions and build stronger communities.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link instagram" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link youtube" aria-label="YouTube">📺</a>
+                        <a href="#" class="social-link twitter" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Donation Info</h3>
+                    <ul>
+                        <li><a href="donate.html">Make a Donation</a></li>
+                        <li><a href="#">Corporate Sponsorship</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Tax Benefits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact for Donations</h3>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📞</span>
+                        <div>
+                            <span class="contact-item-value">+91 98765 43210</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">✉️</span>
+                        <div>
+                            <span class="contact-item-value">donate@chhathutsav.org</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Donate</h3>
+                    <div class="grid grid-2 gap-3">
+                        <button class="btn btn-primary btn-sm quick-donate" data-amount="500">₹500</button>
+                        <button class="btn btn-primary btn-sm quick-donate" data-amount="1000">₹1,000</button>
+                        <button class="btn btn-secondary btn-sm quick-donate" data-amount="2500">₹2,500</button>
+                        <button class="btn btn-secondary btn-sm quick-donate" data-amount="5000">₹5,000</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chhath Utsav Mahasangh. All rights reserved. | Registered NGO</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Donation Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script>
+        // Mobile menu functionality
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isOpen);
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Back to top functionality
+        const backToTop = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Donation amount selection
+        const amountBtns = document.querySelectorAll('.amount-btn');
+        const customAmountInput = document.getElementById('custom-amount');
+        const impactDisplay = document.getElementById('impact-display');
+        let selectedAmount = 1000;
+
+        // Impact messages for different amounts
+        const impactMessages = {
+            500: {
+                title: '₹500 can provide:',
+                items: [
+                    '✓ Safety equipment for 2 volunteers',
+                    '✓ Basic first aid supplies',
+                    '✓ Lighting for 20 meters of ghat',
+                    '✓ Eco-friendly decorative materials'
+                ]
+            },
+            1000: {
+                title: '₹1,000 can provide:',
+                items: [
+                    '✓ Safety equipment for 5 volunteers',
+                    '✓ First aid supplies for medical station',
+                    '✓ Lighting for 50 meters of ghat area',
+                    '✓ Eco-friendly materials for decorations'
+                ]
+            },
+            2500: {
+                title: '₹2,500 can provide:',
+                items: [
+                    '✓ Complete safety setup for 1 section',
+                    '✓ Medical supplies for 1 aid station',
+                    '✓ Lighting for 100 meters',
+                    '✓ Environmental cleanup for 1 day'
+                ]
+            },
+            5000: {
+                title: '₹5,000 can provide:',
+                items: [
+                    '✓ Security setup for major ghat section',
+                    '✓ Complete medical aid station',
+                    '✓ Lighting for 200 meters',
+                    '✓ Week-long environmental program'
+                ]
+            },
+            10000: {
+                title: '₹10,000 can provide:',
+                items: [
+                    '✓ Complete infrastructure for small ghat',
+                    '✓ Mobile medical unit for 1 day',
+                    '✓ Lighting for entire secondary location',
+                    '✓ Month-long community program'
+                ]
+            }
+        };
+
+        function updateImpact(amount) {
+            const impact = impactMessages[amount] || impactMessages[1000];
+            const itemsHtml = impact.items.map(item => `<li>${item}</li>`).join('');
+
+            impactDisplay.innerHTML = `
+                <h4>${impact.title}</h4>
+                <ul>${itemsHtml}</ul>
+            `;
+        }
+
+        amountBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                amountBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedAmount = parseInt(btn.dataset.amount);
+                customAmountInput.value = '';
+                updateImpact(selectedAmount);
+            });
+        });
+
+        customAmountInput.addEventListener('input', (e) => {
+            const amount = parseInt(e.target.value);
+            if (amount >= 100) {
+                amountBtns.forEach(b => b.classList.remove('active'));
+                selectedAmount = amount;
+
+                // Find closest impact message
+                const amounts = Object.keys(impactMessages).map(Number).sort((a, b) => a - b);
+                const closestAmount = amounts.reduce((prev, curr) => 
+                    Math.abs(curr - amount) < Math.abs(prev - amount) ? curr : prev
+                );
+                updateImpact(closestAmount);
+            }
+        });
+
+        // Payment method selection
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        const qrSection = document.getElementById('qr-section');
+
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                paymentOptions.forEach(p => p.classList.remove('selected'));
+                option.classList.add('selected');
+
+                // Show QR code for UPI
+                if (option.dataset.method === 'upi') {
+                    qrSection.style.display = 'block';
+                    qrSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    qrSection.style.display = 'none';
+                }
+            });
+        });
+
+        // Donation form submission
+        const donationForm = document.getElementById('donation-form');
+        donationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (selectedAmount < 100) {
+                alert('Minimum donation amount is ₹100');
+                return;
+            }
+
+            const formData = new FormData(donationForm);
+            const data = Object.fromEntries(formData);
+
+            if (!data['donor-name'] || !data['donor-email']) {
+                alert('Please fill in required fields');
+                return;
+            }
+
+            // Simulate payment processing
+            alert(`Thank you ${data['donor-name']}! Redirecting to payment gateway for ₹${selectedAmount}...`);
+        });
+
+        // Quick donate buttons in footer
+        const quickDonateButtons = document.querySelectorAll('.quick-donate');
+        quickDonateButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const amount = btn.dataset.amount;
+                selectedAmount = parseInt(amount);
+
+                // Scroll to donation form and select amount
+                document.querySelector('.donation-form').scrollIntoView({ behavior: 'smooth' });
+
+                amountBtns.forEach(b => b.classList.remove('active'));
+                const matchingBtn = document.querySelector(`[data-amount="${amount}"]`);
+                if (matchingBtn) {
+                    matchingBtn.classList.add('active');
+                }
+                updateImpact(selectedAmount);
+            });
+        });
+
+        // Set default amount selection
+        document.querySelector('[data-amount="1000"]').classList.add('active');
+        updateImpact(1000);
+    </script>
+</body>
+</html>

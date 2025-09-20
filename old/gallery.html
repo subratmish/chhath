@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Chhath Utsav Mahasangh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for gallery */
+        .media-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            background: var(--bg-light);
+        }
+
+        .media-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .media-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .media-overlay {
+            transform: translateY(0);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">🪔 Chhath Utsav Mahasangh</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="about-chhath.html">About Chhath</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="btn btn-secondary">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>📸 Photo & Video Gallery</h1>
+            <p>Relive the beautiful moments from three decades of Chhath celebrations</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 1rem;">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+                <!-- Media Type Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-type="all">All Media</button>
+                    <button class="filter-btn" data-type="photos">📷 Photos</button>
+                    <button class="filter-btn" data-type="videos">🎥 Videos</button>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2rem;">
+                <!-- Year Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-year="all">All Years</button>
+                    <button class="filter-btn" data-year="2024">2024</button>
+                    <button class="filter-btn" data-year="2023">2023</button>
+                    <button class="filter-btn" data-year="2022">2022</button>
+                    <button class="filter-btn" data-year="2021">2021</button>
+                    <button class="filter-btn" data-year="2020">2020</button>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <!-- Category Filters -->
+                <div class="filters">
+                    <button class="filter-btn active" data-category="all">All Categories</button>
+                    <button class="filter-btn" data-category="rituals">🪔 Rituals</button>
+                    <button class="filter-btn" data-category="devotees">👥 Devotees</button>
+                    <button class="filter-btn" data-category="ghat">🏖️ Ghat Setup</button>
+                    <button class="filter-btn" data-category="cultural">🎭 Cultural</button>
+                    <button class="filter-btn" data-category="community">🤝 Community</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section" style="padding-top: 1rem;">
+        <div class="container">
+            <div class="gallery" id="gallery">
+
+                <!-- Photo Items -->
+                <div class="gallery-item media-item" data-type="photos" data-year="2024" data-category="rituals">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23ff6b35' width='400' height='400'/><text x='50%' y='50%' font-size='48' fill='white' text-anchor='middle' dy='.3em'>🌅 Sandhya Arghya 2024</text></svg>" alt="Sandhya Arghya 2024" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Sandhya Arghya 2024</h4>
+                            <p>Devotees offering prayers to the setting sun</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="videos" data-year="2024" data-category="rituals">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23f7931e' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🎥 Usha Arghya</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Dawn Ritual</text></svg>" alt="Usha Arghya Video">
+                        <button class="play-button" onclick="playVideo('usha-arghya-2024')">▶</button>
+                        <div class="media-overlay">
+                            <h4>Usha Arghya Dawn Ritual</h4>
+                            <p>Beautiful sunrise ceremony video</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2024" data-category="devotees">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%231e3a8a' width='400' height='400'/><text x='50%' y='50%' font-size='42' fill='white' text-anchor='middle' dy='.3em'>👨‍👩‍👧‍👦 Families Together</text></svg>" alt="Families Celebrating" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Families Celebrating</h4>
+                            <p>Multi-generational participation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2023" data-category="ghat">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%2310b981' width='400' height='400'/><text x='50%' y='45%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🏖️ Ghat Setup</text><text x='50%' y='55%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>2023</text></svg>" alt="Ghat Setup 2023" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Ghat Preparation 2023</h4>
+                            <p>Beautifully decorated beach setup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="videos" data-year="2023" data-category="cultural">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23ec4899' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🎵 Folk Songs</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Performance</text></svg>" alt="Folk Songs Video">
+                        <button class="play-button" onclick="playVideo('folk-songs-2023')">▶</button>
+                        <div class="media-overlay">
+                            <h4>Traditional Folk Songs</h4>
+                            <p>Cultural performance highlights</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2023" data-category="community">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23059669' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🧹 Cleanup</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Drive 2023</text></svg>" alt="Cleanup Drive 2023" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Community Cleanup Drive</h4>
+                            <p>Volunteers cleaning Juhu Beach</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2022" data-category="rituals">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%237c3aed' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🥥 Prasad</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Preparation</text></svg>" alt="Prasad Preparation" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Prasad Preparation</h4>
+                            <p>Traditional offerings being prepared</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="videos" data-year="2022" data-category="devotees">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23dc2626' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🙏 Prayer</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Ceremony</text></svg>" alt="Prayer Ceremony Video">
+                        <button class="play-button" onclick="playVideo('prayer-ceremony-2022')">▶</button>
+                        <div class="media-overlay">
+                            <h4>Prayer Ceremony 2022</h4>
+                            <p>Devotees in deep spiritual connection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2021" data-category="devotees">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23b45309' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>😷 COVID</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Safety 2021</text></svg>" alt="COVID Safety 2021" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>COVID-Safe Celebration</h4>
+                            <p>Maintaining traditions with safety protocols</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2020" data-category="ghat">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%236366f1' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>💡 Night</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Illumination</text></svg>" alt="Night Illumination 2020" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Ghat Night Illumination</h4>
+                            <p>Beautiful lighting during evening prayers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="videos" data-year="2020" data-category="cultural">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23059669' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>🎭 Virtual</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Celebration</text></svg>" alt="Virtual Celebration 2020">
+                        <button class="play-button" onclick="playVideo('virtual-celebration-2020')">▶</button>
+                        <div class="media-overlay">
+                            <h4>Virtual Celebration 2020</h4>
+                            <p>Adapting traditions during pandemic</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item media-item" data-type="photos" data-year="2024" data-category="community">
+                    <div class="media-container">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><rect fill='%23be185d' width='400' height='400'/><text x='50%' y='40%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>👨‍⚕️ Medical</text><text x='50%' y='60%' font-size='36' fill='white' text-anchor='middle' dy='.3em'>Support</text></svg>" alt="Medical Support Team" onclick="openLightbox(this)">
+                        <div class="media-overlay">
+                            <h4>Medical Support Team</h4>
+                            <p>Ensuring devotee safety and health</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary" onclick="loadMoreMedia()">Load More Media</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Gallery Statistics</h2>
+            <div class="grid grid-4">
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--primary-color); font-size: 2.5rem;">2,500+</h3>
+                    <p>Photos Captured</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--secondary-color); font-size: 2.5rem;">150+</h3>
+                    <p>Videos Recorded</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: var(--accent-color); font-size: 2.5rem;">30+</h3>
+                    <p>Years Documented</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3 style="color: #10b981; font-size: 2.5rem;">50,000+</h3>
+                    <p>Memories Preserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightboxContent" class="lightbox-content" src="" alt="">
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="position: relative; max-width: 90%; max-height: 90%;">
+            <button onclick="closeVideo()" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+            <video id="videoPlayer" controls style="width: 100%; height: auto; max-height: 80vh;">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- JavaScript for Gallery Functionality -->
+    <script>
+        // Filter functionality
+        function setupFilters() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from buttons in the same group
+                    const filterType = btn.dataset.type || btn.dataset.year || btn.dataset.category;
+                    const group = btn.dataset.type ? 'type' : (btn.dataset.year ? 'year' : 'category');
+
+                    document.querySelectorAll(`[data-${group}]`).forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    filterGallery();
+                });
+            });
+        }
+
+        function filterGallery() {
+            const activeType = document.querySelector('[data-type].active')?.dataset.type || 'all';
+            const activeYear = document.querySelector('[data-year].active')?.dataset.year || 'all';
+            const activeCategory = document.querySelector('[data-category].active')?.dataset.category || 'all';
+
+            document.querySelectorAll('.media-item').forEach(item => {
+                const matchesType = activeType === 'all' || item.dataset.type === activeType;
+                const matchesYear = activeYear === 'all' || item.dataset.year === activeYear;
+                const matchesCategory = activeCategory === 'all' || item.dataset.category === activeCategory;
+
+                if (matchesType && matchesYear && matchesCategory) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox functionality
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxContent = document.getElementById('lightboxContent');
+
+            lightboxContent.src = img.src;
+            lightboxContent.alt = img.alt;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Video player functionality
+        function playVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('videoPlayer');
+
+            // In a real implementation, you would set the actual video source
+            video.src = `videos/${videoId}.mp4`;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('videoPlayer');
+
+            video.pause();
+            video.src = '';
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Load more functionality
+        function loadMoreMedia() {
+            // In a real implementation, this would load more images/videos from the server
+            alert('Loading more media... (This would fetch additional content from the server)');
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+
+        document.getElementById('videoModal').addEventListener('click', (e) => {
+            if (e.target.id === 'videoModal') {
+                closeVideo();
+            }
+        });
+
+        // Initialize filters
+        setupFilters();
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 Juhu Beach, Mumbai</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@chhathutsav.org</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="about-us.html">About Our Organization</a></p>
+                    <p><a href="about-chhath.html">About Chhath Puja</a></p>
+                    <p><a href="events.html">Upcoming Events</a></p>
+                    <p><a href="blog.html">Latest News</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <p><a href="contact.html">Volunteer With Us</a></p>
+                    <p><a href="donate.html">Make a Donation</a></p>
+                    <p><a href="#">Join Newsletter</a></p>
+                    <p><a href="#">Share Our Mission</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chhath Utsav Mahasangh. Serving devotion, culture & community since 1993.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

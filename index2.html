@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chhath Utsav Mahasangh, a cultural and social organization since 1993, dedicated to preserving the sacred traditions of Chhath Puja.">
+
+    <title>Chhath Utsav Mahasangh - Serving Devotion, Culture & Community since 1993</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home-sections.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header id="header" class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" alt="Chhath Utsav Mahasangh Logo" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chhathpuja.html">Chhath Puja</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown me-3">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">EN</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                            </ul>
+                        </div>
+                        <a href="donate.html" class="btn btn-brand-orange rounded-pill px-4 shadow-sm">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
+            <img src="images/mainhero.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1583844491115-ccbb53bb6eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';" alt="Devotees offering prayers at sunrise during Chhath Puja" class="hero-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h1 class="display-3 fw-extrabold mb-3 text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                            Serving Devotion, Culture & Community <br>
+                            <span class="text-brand-orange">since 1993</span>
+                        </h1>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center my-4">
+                            <a href="#about" class="btn btn-brand-orange btn-lg rounded-pill px-4 py-2 me-sm-3 mb-3 mb-sm-0 shadow-lg hero-btn">
+                                Explore Mahasangh
+                            </a>
+                            <a href="#events" class="btn btn-light btn-lg rounded-pill px-4 py-2 shadow-lg hero-btn">
+                                Upcoming Events
+                            </a>
+                        </div>
+                        <div class="mt-5 p-4 rounded-4" style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px);">
+                            <h3 class="fw-bold mb-3 text-white">Next Chhath Puja Begins In</h3>
+                            <div id="countdown-timer" class="d-flex justify-content-around text-white">
+                                <div class="time-block">
+                                    <span id="days" class="time-val">48</span><br>
+                                    <span class="time-label">Days</span>
+                                </div>
+                                <div class="time-block">
+                                    <span id="hours" class="time-val">07</span><br>
+                                    <span class="time-label">Hours</span>
+                                </div>
+                                <div class="time-block">
+                                    <span id="minutes" class="time-val">24</span><br>
+                                    <span class="time-label">Minutes</span>
+                                </div>
+                                <div class="time-block">
+                                    <span id="seconds" class="time-val">18</span><br>
+                                    <span class="time-label">Seconds</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-white">
+            <div class="container fade-in">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-3">About Chhath Utsav Mahasangh</h2>
+                        <p class="fs-5 text-secondary mb-3">
+                            Founded in 1993, Chhath Utsav Mahasangh is a cultural and social organization dedicated to preserving the sacred traditions of Chhath Puja. We strive to provide a safe, inclusive, and environmentally conscious environment for thousands of devotees each year.
+                        </p>
+                        <p class="text-secondary mb-4">
+                            Our journey began with a small group of volunteers and has grown into a large community-driven effort, ensuring the sanctity and grandeur of the festival for generations to come.
+                        </p>
+                        <a href="about.html" class="btn btn-dark-custom rounded-pill px-4 py-2 mt-3">Read Full History</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="images/group1.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';" alt="Historical photo of a Mahasangh community event" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Message Section -->
+        <section id="founder-message" class="py-5 bg-light">
+            <div class="container fade-in">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-4">
+                        <div class="founder-image-container text-center">
+                            <img src="images/founder.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80';" alt="Founder of Chhath Utsav Mahasangh" class="img-fluid rounded-4 shadow-lg" style="max-width: 300px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-4">Message from the Founder</h2>
+                        <blockquote class="blockquote border-start border-warning border-4 ps-4 mb-4">
+                            <p class="fs-5 text-secondary mb-3">
+                                "Chhath Puja teaches us to be grateful for abundance, to uphold the sanctity of nature, and to help devotees, and strengthen bonds of community and come partway to who they provide every year."
+                            </p>
+                            <footer class="blockquote-footer text-dark fw-bold">
+                                Mohan Mishra, <cite title="Founder">Founder</cite>
+                            </footer>
+                        </blockquote>
+                        <a href="about.html" class="btn btn-dark-custom rounded-pill px-4 py-2">Read Full Message</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Contributions Section -->
+        <section id="contributions" class="py-5 bg-white">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Our Contributions Since 1993</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-building" style="font-size: 3rem; color: #ff6b35;"></i>
+                            </div>
+                            <h5 class="fw-bold">Event Infrastructure</h5>
+                            <p class="text-secondary small mb-0">Building safe ghats, lighting, and facilities for all devotees.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-shield-check" style="font-size: 3rem; color: #ff6b35;"></i>
+                            </div>
+                            <h5 class="fw-bold">Safety & Comfort</h5>
+                            <p class="text-secondary small mb-0">Ensuring medical aid, security, and comfort for every family.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-leaf" style="font-size: 3rem; color: #ff6b35;"></i>
+                            </div>
+                            <h5 class="fw-bold">Environmental Practice</h5>
+                            <p class="text-secondary small mb-0">Promoting clean rivers and sustainable celebration practices.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-people" style="font-size: 3rem; color: #ff6b35;"></i>
+                            </div>
+                            <h5 class="fw-bold">Community Outreach</h5>
+                            <p class="text-secondary small mb-0">Engaging youth and spreading cultural awareness year-round.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glimpses of Devotion Gallery -->
+        <section id="gallery" class="py-5 bg-light">
+            <div class="container text-center fade-in">
+                <h2 class="display-5 fw-bold mb-5">Glimpses of Devotion</h2>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-img-container">
+                            <img src="https://images.unsplash.com/photo-1583844491115-ccbb53bb6eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery Image of Chhath Puja" class="img-fluid gallery-img rounded-4">
+                            <div class="overlay d-flex align-items-center justify-content-center">
+                                <h6 class="text-white fw-bold">Chhath Puja</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-img-container">
+                            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery Image of Rituals" class="img-fluid gallery-img rounded-4">
+                            <div class="overlay d-flex align-items-center justify-content-center">
+                                <h6 class="text-white fw-bold">Rituals</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-img-container">
+                            <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery Image of the Community" class="img-fluid gallery-img rounded-4">
+                            <div class="overlay d-flex align-items-center justify-content-center">
+                                <h6 class="text-white fw-bold">Community</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-img-container">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery Image of Sunrise Prayers" class="img-fluid gallery-img rounded-4">
+                            <div class="overlay d-flex align-items-center justify-content-center">
+                                <h6 class="text-white fw-bold">Sunrise</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html" class="btn btn-brand-orange btn-lg rounded-pill px-5 py-2 mt-4">View Full Gallery</a>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section id="events" class="py-5 bg-white">
+            <div class="container fade-in">
+                <h2 class="display-5 fw-bold mb-5 text-center">Upcoming Events</h2>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="event-card h-100">
+                            <div class="event-date-large">
+                                <div class="date-number">25</div>
+                                <div class="date-month">OCT</div>
+                            </div>
+                            <div class="event-content">
+                                <h5 class="fw-bold">Chhath Puja - Day 1 (Nahay Khay)</h5>
+                                <p class="text-secondary small mb-2">Juhu Beach, Mumbai</p>
+                                <a href="events.html" class="btn btn-outline-dark btn-sm rounded-pill">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="event-card h-100">
+                            <div class="event-date-large">
+                                <div class="date-number">26</div>
+                                <div class="date-month">OCT</div>
+                            </div>
+                            <div class="event-content">
+                                <h5 class="fw-bold">Chhath Puja - Day 2 (Kharna)</h5>
+                                <p class="text-secondary small mb-2">Juhu Beach, Mumbai</p>
+                                <a href="events.html" class="btn btn-outline-dark btn-sm rounded-pill">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="event-card h-100">
+                            <div class="event-date-large">
+                                <div class="date-number">27</div>
+                                <div class="date-month">OCT</div>
+                            </div>
+                            <div class="event-content">
+                                <h5 class="fw-bold">Chhath Puja - Day 3 (Sandhya Arghya)</h5>
+                                <p class="text-secondary small mb-2">Juhu Beach, Mumbai</p>
+                                <a href="events.html" class="btn btn-outline-dark btn-sm rounded-pill">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="event-card h-100">
+                            <div class="event-date-large">
+                                <div class="date-number">28</div>
+                                <div class="date-month">OCT</div>
+                            </div>
+                            <div class="event-content">
+                                <h5 class="fw-bold">Chhath Puja - Day 4 (Usha Arghya)</h5>
+                                <p class="text-secondary small mb-2">Juhu Beach, Mumbai</p>
+                                <a href="events.html" class="btn btn-outline-dark btn-sm rounded-pill">View Details <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="events.html" class="btn btn-dark-custom rounded-pill px-4 py-2">View Full Calendar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Updates Section -->
+        <section id="news-updates" class="py-5 bg-light">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">News & Updates</h2>
+                    <p class="lead text-secondary">Stay informed with our latest activities and stories</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#" class="card shadow-sm h-100 text-decoration-none text-dark blog-card" style="background: #1E293B;">
+                            <div class="card-body p-4 text-white">
+                                <h5 class="card-title fw-bold text-white mb-3">Governor Attends Puja</h5>
+                                <p class="card-text text-white-50 mb-3">Governor Attends Chhath Puja at Juhu Beach</p>
+                                <p class="card-text text-white-50 small mb-2"><i class="bi bi-calendar3"></i> Sep 05, 2024</p>
+                                <p class="card-text text-white-50 small">Hon'ble Governor praised the community's dedication to preserving cultural heritage and traditions.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#" class="card shadow-sm h-100 text-decoration-none text-dark blog-card" style="background: #059669;">
+                            <div class="card-body p-4 text-white">
+                                <h5 class="card-title fw-bold text-white mb-3">Green Initiative Success</h5>
+                                <p class="card-text text-white-50 mb-3">'Green Chhath' Initiative a Resounding Success</p>
+                                <p class="card-text text-white-50 small mb-2"><i class="bi bi-calendar3"></i> Sep 02, 2024</p>
+                                <p class="card-text text-white-50 small">This year's focus on sustainability saw a 50% reduction in plastic waste, thanks to our amazing volunteers.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#" class="card shadow-sm h-100 text-decoration-none text-dark blog-card" style="background: #F97316;">
+                            <div class="card-body p-4 text-white">
+                                <h5 class="card-title fw-bold text-white mb-3">Volunteer Registration</h5>
+                                <p class="card-text text-white-50 mb-3">Volunteer Registration for Chhath 2024 is Now Open</p>
+                                <p class="card-text text-white-50 small mb-2"><i class="bi bi-calendar3"></i> Aug 30, 2024</p>
+                                <p class="card-text text-white-50 small">Join our team of dedicated volunteers to help make this year's celebration a grand success.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- In the News Section -->
+        <section id="media-coverage" class="py-5 bg-white">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">In the News</h2>
+                    <p class="lead text-secondary">Our celebrations as covered by the media</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="newspaper-clipping">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow" alt="Times of India newspaper clipping" style="height: 300px; object-fit: cover; width: 100%;">
+                            <div class="text-center mt-2">
+                                <h6 class="fw-bold">Times of India</h6>
+                                <p class="small text-secondary">Chhath Puja at Juhu Beach draws thousands of devotees</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="newspaper-clipping">
+                            <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow" alt="The Hindu newspaper clipping" style="height: 300px; object-fit: cover; width: 100%;">
+                            <div class="text-center mt-2">
+                                <h6 class="fw-bold">The Hindu</h6>
+                                <p class="small text-secondary">Festival of Faith and Nature in Mumbai</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="newspaper-clipping">
+                            <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid rounded shadow" alt="Mid-Day newspaper clipping" style="height: 300px; object-fit: cover; width: 100%;">
+                            <div class="text-center mt-2">
+                                <h6 class="fw-bold">Mid-Day</h6>
+                                <p class="small text-secondary">Mumbai's Devotees Celebrate with Fervor</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Reels Section -->
+        <section id="reels" class="py-5 bg-dark text-white">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Community Reels</h2>
+                    <p class="lead text-white-50">Quick glimpses into the heart of the celebration</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="reel-item d-block">
+                            <div class="reel-container position-relative" style="background: linear-gradient(135deg, #F97316, #EA580C); aspect-ratio: 9/16; border-radius: 1rem; overflow: hidden;">
+                                <div class="reel-overlay d-flex flex-column justify-content-between h-100 p-3">
+                                    <div class="text-center">
+                                        <i class="bi bi-play-circle-fill fs-1 text-white mb-3"></i>
+                                        <h6 class="fw-bold text-white">Sunrise Arghya</h6>
+                                    </div>
+                                    <div class="text-center">
+                                        <small class="text-white-50">Sunrise Arghya</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="reel-item d-block">
+                            <div class="reel-container position-relative" style="background: linear-gradient(135deg, #DC2626, #B91C1C); aspect-ratio: 9/16; border-radius: 1rem; overflow: hidden;">
+                                <div class="reel-overlay d-flex flex-column justify-content-between h-100 p-3">
+                                    <div class="text-center">
+                                        <i class="bi bi-play-circle-fill fs-1 text-white mb-3"></i>
+                                        <h6 class="fw-bold text-white">Making Thekua</h6>
+                                    </div>
+                                    <div class="text-center">
+                                        <small class="text-white-50">Making Thekua</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="reel-item d-block">
+                            <div class="reel-container position-relative" style="background: linear-gradient(135deg, #1E293B, #334155); aspect-ratio: 9/16; border-radius: 1rem; overflow: hidden;">
+                                <div class="reel-overlay d-flex flex-column justify-content-between h-100 p-3">
+                                    <div class="text-center">
+                                        <i class="bi bi-play-circle-fill fs-1 text-white mb-3"></i>
+                                        <h6 class="fw-bold text-white">Ghat Decorations</h6>
+                                    </div>
+                                    <div class="text-center">
+                                        <small class="text-white-50">Ghat Decorations</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="reel-item d-block">
+                            <div class="reel-container position-relative" style="background: linear-gradient(135deg, #059669, #047857); aspect-ratio: 9/16; border-radius: 1rem; overflow: hidden;">
+                                <div class="reel-overlay d-flex flex-column justify-content-between h-100 p-3">
+                                    <div class="text-center">
+                                        <i class="bi bi-play-circle-fill fs-1 text-white mb-3"></i>
+                                        <h6 class="fw-bold text-white">Our Volunteer Team</h6>
+                                    </div>
+                                    <div class="text-center">
+                                        <small class="text-white-50">Volunteer Team</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="reel-item d-block">
+                            <div class="reel-container position-relative" style="background: linear-gradient(135deg, #6366F1, #4F46E5); aspect-ratio: 9/16; border-radius: 1rem; overflow: hidden;">
+                                <div class="reel-overlay d-flex flex-column justify-content-between h-100 p-3">
+                                    <div class="text-center">
+                                        <i class="bi bi-play-circle-fill fs-1 text-white mb-3"></i>
+                                        <h6 class="fw-bold text-white">Cultural Night</h6>
+                                    </div>
+                                    <div class="text-center">
+                                        <small class="text-white-50">Cultural Night</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section id="blog" class="py-5 bg-light">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold">Latest Stories</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow-sm h-100 blog-card" style="background: #F97316;">
+                            <div class="card-body d-flex flex-column p-4 text-white">
+                                <span class="badge bg-light text-dark mb-2 align-self-start">October 15, 2024</span>
+                                <h5 class="card-title fw-bold text-white">Blog Post 1</h5>
+                                <h6 class="text-white-50 mb-3">The Significance of 'Thekua' in Chhath Puja</h6>
+                                <p class="card-text text-white-50 mt-auto">A deep dive into the cultural and spiritual meaning of the festival's most famous prasad.</p>
+                                <a href="blog.html" class="text-white fw-bold text-decoration-none mt-3">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow-sm h-100 blog-card" style="background: #F97316;">
+                            <div class="card-body d-flex flex-column p-4 text-white">
+                                <span class="badge bg-light text-dark mb-2 align-self-start">September 28, 2024</span>
+                                <h5 class="card-title fw-bold text-white">Blog Post 2</h5>
+                                <h6 class="text-white-50 mb-3">A Call for Volunteers: Join Us This Year</h6>
+                                <p class="card-text text-white-50 mt-auto">Learn how you can contribute your time and skills to make this year's Chhath Puja a success.</p>
+                                <a href="blog.html" class="text-white fw-bold text-decoration-none mt-3">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow-sm h-100 blog-card" style="background: #F97316;">
+                            <div class="card-body d-flex flex-column p-4 text-white">
+                                <span class="badge bg-light text-dark mb-2 align-self-start">September 10, 2024</span>
+                                <h5 class="card-title fw-bold text-white">Blog Post 3</h5>
+                                <h6 class="text-white-50 mb-3">Our Commitment to a Greener Chhath</h6>
+                                <p class="card-text text-white-50 mt-auto">Discover the steps we're taking to ensure our celebrations are eco-friendly and sustainable.</p>
+                                <a href="blog.html" class="text-white fw-bold text-decoration-none mt-3">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Get Involved -->
+        <section id="involved" class="py-5 bg-white">
+            <div class="container text-center fade-in">
+                <h2 class="display-5 fw-bold mb-5">How to Get Involved</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card h-100 p-4 involved-card shadow-sm">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="fw-bold">Volunteer</h3>
+                                <p class="text-secondary my-3">Be the backbone of the celebration. Join our team to help with management, safety, and devotee assistance.</p>
+                                <a href="contact.html" class="btn btn-dark-custom rounded-pill px-4 py-2 mt-auto">Become Volunteer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 p-4 involved-card shadow border-2 border-warning">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="fw-bold text-brand-orange">Donate</h3>
+                                <p class="text-secondary my-3">Your contribution helps us build infrastructure, provide amenities, and ensure a safe festival for all.</p>
+                                <a href="donate.html" class="btn btn-brand-orange rounded-pill px-4 py-2 mt-auto">Contribute Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 p-4 involved-card shadow-sm">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="fw-bold">Share</h3>
+                                <p class="text-secondary my-3">Share our mission and the beauty of Chhath Puja with your friends and family on social media.</p>
+                                <a href="#" class="btn btn-dark-custom rounded-pill px-4 py-2 mt-auto">Share Our Mission</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3">Chhath Utsav Mahasangh</h5>
+                    <p class="text-white-50">Preserving culture and serving the community since 1993.</p>
+                    <p class="text-white-50">Juhu Beach, Mumbai</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3" aria-label="Visit our Facebook page">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Visit our Instagram page">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white" aria-label="Visit our YouTube channel">
+                            <i class="bi bi-youtube fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white-50 text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white fw-bold mb-3">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="donate.html" class="text-white-50 text-decoration-none">Get Involved</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white fw-bold mb-3">Our Location</h5>
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15081.990425983776!2d72.82299865!3d19.0857506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9165c589bb5%3A0x9d3cb343d6b3540!2sJuhu%20Beach!5e0!3m2!1sen!2sin!4v1725576503929!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="Location of Chhath Puja at Juhu Beach"
+                            class="rounded-3">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-secondary small">
+                <p>&copy; <span id="current-year">2024</span> Chhath Utsav Mahasangh. All Rights Reserved.</p>
+                <p class="mt-1">
+                    <a href="#" class="text-white-50 text-decoration-none">Terms of Service</a> | 
+                    <a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+/* ==========================================================================
+   EVENTS CALENDAR STYLES - Calendar, event cards, and scheduling components
+   ========================================================================== */
+
+/* Calendar Layout */
+.calendar {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    margin-bottom: var(--spacing-8);
+}
+
+.calendar-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: var(--spacing-6);
+    text-align: center;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.calendar-nav button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--white);
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    padding: var(--spacing-2);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-nav button:hover,
+.calendar-nav button:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.calendar-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day-header {
+    padding: var(--spacing-3);
+    text-align: center;
+    font-weight: 600;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-size: var(--font-size-sm);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.calendar-day {
+    min-height: 100px;
+    padding: var(--spacing-2);
+    border: 1px solid #e2e8f0;
+    position: relative;
+    background: var(--white);
+    transition: background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background: var(--bg-light);
+}
+
+.calendar-day.today {
+    background: rgba(255, 107, 53, 0.1);
+    border-color: var(--primary-color);
+}
+
+.calendar-day.other-month {
+    color: var(--text-muted);
+    background: #f9fafb;
+}
+
+.calendar-day.has-event {
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.calendar-day.has-event::after {
+    content: '';
+    position: absolute;
+    top: var(--spacing-1);
+    right: var(--spacing-1);
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.calendar-day-number {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-1);
+}
+
+.calendar-day.today .calendar-day-number {
+    color: var(--primary-color);
+}
+
+/* Hindu Calendar Information */
+.tithi-info {
+    font-size: var(--font-size-xs);
+    color: var(--text-light);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-1);
+}
+
+.hindu-date {
+    font-size: var(--font-size-xs);
+    color: var(--accent-color);
+    font-weight: 500;
+    background: rgba(30, 58, 138, 0.1);
+    padding: 2px var(--spacing-1);
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: var(--spacing-1);
+}
+
+/* Event Items within Calendar */
+.calendar-event {
+    font-size: var(--font-size-xs);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 2px var(--spacing-1);
+    border-radius: 4px;
+    margin-bottom: 2px;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.calendar-event:hover {
+    background: #e55a2b;
+}
+
+.calendar-event.festival {
+    background: var(--accent-color);
+}
+
+.calendar-event.workshop {
+    background: var(--success);
+}
+
+/* Festival Season Highlight */
+.festival-season {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-lg);
+    margin-bottom: var(--spacing-8);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.festival-season::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle fill="rgba(255,255,255,0.05)" cx="20" cy="20" r="10"/><circle fill="rgba(255,255,255,0.03)" cx="80" cy="40" r="15"/><circle fill="rgba(255,255,255,0.04)" cx="60" cy="80" r="8"/></svg>');
+    background-size: 50px 50px;
+}
+
+.festival-season .container {
+    position: relative;
+    z-index: 2;
+}
+
+.festival-season h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-4);
+    color: var(--white);
+}
+
+.festival-season p {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    color: var(--white);
+}
+
+/* Event List View */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+.event-item {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow);
+    transition: all var(--transition-normal);
+    border-left: 4px solid var(--primary-color);
+}
+
+.event-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.event-item.festival {
+    border-left-color: var(--accent-color);
+}
+
+.event-item.workshop {
+    border-left-color: var(--success);
+}
+
+.event-item.celebration {
+    border-left-color: var(--secondary-color);
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-4);
+    gap: var(--spacing-4);
+}
+
+.event-date-badge {
+    flex-shrink: 0;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-3);
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 80px;
+}
+
+.event-date-day {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    line-height: 1;
+    display: block;
+}
+
+.event-date-month {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+    display: block;
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-2);
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.event-meta {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-3);
+    flex-wrap: wrap;
+}
+
+.event-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+}
+
+.event-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-4);
+}
+
+.event-significance {
+    background: var(--bg-light);
+    padding: var(--spacing-3);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--accent-color);
+    margin-bottom: var(--spacing-4);
+}
+
+.event-significance-label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-1);
+}
+
+.event-significance-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.event-actions {
+    display: flex;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+}
+
+/* Event Categories Filter */
+.event-categories {
+    display: flex;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-8);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-filter {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: 2px solid var(--primary-color);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    min-height: 36px;
+}
+
+.category-filter.active,
+.category-filter:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.category-filter.festival { border-color: var(--accent-color); color: var(--accent-color); }
+.category-filter.festival.active,
+.category-filter.festival:hover { background: var(--accent-color); }
+
+.category-filter.workshop { border-color: var(--success); color: var(--success); }
+.category-filter.workshop.active,
+.category-filter.workshop:hover { background: var(--success); }
+
+/* Responsive Events */
+@media (max-width: 1024px) {
+    .calendar-day {
+        min-height: 80px;
+        padding: var(--spacing-1);
+    }
+
+    .event-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .event-date-badge {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-nav {
+        flex-wrap: wrap;
+        gap: var(--spacing-2);
+    }
+
+    .calendar-title {
+        font-size: var(--font-size-xl);
+        order: -1;
+        width: 100%;
+        margin-bottom: var(--spacing-3);
+    }
+
+    .calendar-day {
+        min-height: 60px;
+        padding: var(--spacing-1);
+    }
+
+    .calendar-day-header {
+        padding: var(--spacing-2);
+        font-size: var(--font-size-xs);
+    }
+
+    .calendar-event,
+    .tithi-info,
+    .hindu-date {
+        font-size: 10px;
+    }
+
+    .event-item {
+        padding: var(--spacing-4);
+    }
+
+    .event-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .event-meta {
+        flex-direction: column;
+        gap: var(--spacing-2);
+    }
+
+    .festival-season h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .event-categories {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-grid {
+        font-size: var(--font-size-xs);
+    }
+
+    .calendar-day {
+        min-height: 50px;
+    }
+
+    .calendar-day-number {
+        font-size: var(--font-size-sm);
+    }
+
+    .event-date-badge {
+        min-width: 60px;
+        padding: var(--spacing-2);
+    }
+
+    .event-date-day {
+        font-size: var(--font-size-lg);
+    }
+
+    .event-actions {
+        flex-direction: column;
+    }
+
+    .event-actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chhath Puja Events 2024 - Festival calendar, upcoming celebrations and community events">
+
+    <title>Events - Chhath Puja Festival Calendar | Chhath Utsav Mahasangh</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header id="header" class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" alt="Chhath Utsav Mahasangh Logo" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chhathpuja.html">Chhath Puja</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown me-3">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">EN</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">हिन्दी</a></li>
+                            </ul>
+                        </div>
+                        <a href="donate.html" class="btn btn-brand-orange rounded-pill px-4 shadow-sm">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Events</li>
+                </ol>
+            </nav>
+            <h1 class="display-4 fw-bold">Festival Events</h1>
+            <p class="lead">Join us for the celebration of Chhath Puja 2024</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Festival Calendar Section -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Calendar -->
+                    <div class="col-lg-8">
+                        <div class="festival-calendar">
+                            <!-- Calendar Header -->
+                            <div class="calendar-header">
+                                <button class="btn btn-link text-white p-2" id="prevMonth">
+                                    <i class="bi bi-chevron-left"></i>
+                                </button>
+                                <h3 class="calendar-title text-white fw-bold mb-0">
+                                    October 2025 - कार्तिक मास
+                                </h3>
+                                <button class="btn btn-link text-white p-2" id="nextMonth">
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+
+                            <!-- Calendar Grid -->
+                            <div class="calendar-grid">
+                                <!-- Days Header -->
+                                <div class="calendar-days-header">
+                                    <div class="calendar-day-header">Sun</div>
+                                    <div class="calendar-day-header">Mon</div>
+                                    <div class="calendar-day-header">Tue</div>
+                                    <div class="calendar-day-header">Wed</div>
+                                    <div class="calendar-day-header">Thu</div>
+                                    <div class="calendar-day-header">Fri</div>
+                                    <div class="calendar-day-header">Sat</div>
+                                </div>
+
+                                <!-- Calendar Days -->
+                                <div class="calendar-days">
+                                    <!-- Week 1 -->
+                                    <div class="calendar-day empty"></div>
+                                    <div class="calendar-day empty"></div>
+                                    <div class="calendar-day empty"></div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">1</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">2</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">3</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">4</span>
+                                    </div>
+
+                                    <!-- Week 2 -->
+                                    <div class="calendar-day">
+                                        <span class="day-number">5</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">6</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">7</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">8</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">9</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">10</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">11</span>
+                                    </div>
+
+                                    <!-- Week 3 -->
+                                    <div class="calendar-day">
+                                        <span class="day-number">12</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">13</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">14</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">15</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">16</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">17</span>
+                                    </div>
+                                    <div class="calendar-day festival-day">
+                                        <span class="day-number">18</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Dhanteras</div>
+                                    </div>
+
+                                    <!-- Week 4 -->
+                                    <div class="calendar-day">
+                                        <span class="day-number">19</span>
+                                    </div>
+                                    <div class="calendar-day festival-day">
+                                        <span class="day-number">20</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Choti Diwali</div>
+                                    </div>
+                                    <div class="calendar-day festival-day">
+                                        <span class="day-number">21</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Diwali</div>
+                                    </div>
+                                    <div class="calendar-day festival-day">
+                                        <span class="day-number">22</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Govardhan</div>
+                                    </div>
+                                    <div class="calendar-day festival-day">
+                                        <span class="day-number">23</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Bhai Dooj</div>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">24</span>
+                                    </div>
+                                    <div class="calendar-day festival-day chhath-day">
+                                        <span class="day-number">25</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Nahay Khay</div>
+                                    </div>
+
+                                    <!-- Week 5 -->
+                                    <div class="calendar-day festival-day chhath-day">
+                                        <span class="day-number">26</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Kharna</div>
+                                    </div>
+                                    <div class="calendar-day festival-day chhath-day">
+                                        <span class="day-number">27</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Sandhya Arghya</div>
+                                    </div>
+                                    <div class="calendar-day festival-day chhath-day">
+                                        <span class="day-number">28</span>
+                                        <span class="festival-dot"></span>
+                                        <div class="festival-name">Usha Arghya</div>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">29</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">30</span>
+                                    </div>
+                                    <div class="calendar-day">
+                                        <span class="day-number">31</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sacred Calendar Highlights -->
+                    <div class="col-lg-4">
+                        <div class="calendar-highlights">
+                            <h4 class="fw-bold mb-4">Sacred Calendar Highlights</h4>
+
+                            <div class="highlight-item mb-4">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-brightness-high text-warning"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h6 class="fw-bold mb-1">Diwali Panchmaha</h6>
+                                    <p class="text-muted small mb-1">October 18-23, 2025</p>
+                                    <p class="small text-brand-orange">कार्तिक कृष्णा त्रयोदशी से शुक्ल द्वितीया</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item mb-4">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-sun text-brand-orange"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h6 class="fw-bold mb-1">Chhath Puja</h6>
+                                    <p class="text-muted small mb-1">October 25-28, 2025</p>
+                                    <p class="small text-brand-orange">कार्तिक शुक्ल चतुर्थी से सप्तमी</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item mb-4">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-mortarboard text-success"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h6 class="fw-bold mb-1">Pre-Festival Workshops</h6>
+                                    <p class="text-muted small mb-1">October 17 & 24, 2025</p>
+                                    <p class="small">Traditional knowledge sharing</p>
+                                </div>
+                            </div>
+
+                            <div class="highlight-item mb-4">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-heart text-info"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h6 class="fw-bold mb-1">Community Service</h6>
+                                    <p class="text-muted small mb-1">November 2, 2025</p>
+                                    <p class="small">Post-festival environmental care</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Countdown Section -->
+        <section class="py-5 bg-white">
+            <div class="container text-center fade-in">
+                <h2 class="display-6 fw-bold mb-4">Next Chhath Puja Begins In</h2>
+                <div id="countdown-timer" class="d-flex justify-content-center text-dark mb-4" style="max-width: 600px; margin: 0 auto;">
+                    <div class="time-block mx-3">
+                        <span id="days" class="time-val text-brand-orange">48</span><br>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-block mx-3">
+                        <span id="hours" class="time-val text-brand-orange">07</span><br>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-block mx-3">
+                        <span id="minutes" class="time-val text-brand-orange">24</span><br>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-block mx-3">
+                        <span id="seconds" class="time-val text-brand-orange">18</span><br>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="text-secondary">October 25-28, 2024 | Juhu Beach, Mumbai</p>
+            </div>
+        </section>
+
+        <!-- Main Festival Events -->
+        <section class="py-5 bg-light">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Main Festival Events</h2>
+                    <p class="lead text-secondary">Four sacred days of Chhath Puja celebration</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="event-card h-100">
+                            <div class="d-flex h-100">
+                                <div class="event-date-large me-4">
+                                    <div class="date-number">25</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4 class="fw-bold">Day 1 - Nahay Khay</h4>
+                                    <p class="text-brand-orange fw-bold mb-2">Friday, October 25, 2024</p>
+                                    <p class="text-secondary mb-3">The purification day begins with holy baths and sattvic food consumption. Devotees prepare themselves physically and spiritually for the upcoming rituals.</p>
+                                    <div class="mb-3">
+                                        <span class="badge bg-light text-dark border me-2">📍 Juhu Beach</span>
+                                        <span class="badge bg-light text-dark border me-2">🕕 6:00 AM - 8:00 PM</span>
+                                        <span class="badge bg-light text-dark border">👥 10,000+ Expected</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="event-card h-100">
+                            <div class="d-flex h-100">
+                                <div class="event-date-large me-4">
+                                    <div class="date-number">26</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4 class="fw-bold">Day 2 - Lohanda/Kharna</h4>
+                                    <p class="text-brand-orange fw-bold mb-2">Saturday, October 26, 2024</p>
+                                    <p class="text-secondary mb-3">Day-long nirjala fast followed by evening moon worship and kheer prasad. This day tests devotees' spiritual determination.</p>
+                                    <div class="mb-3">
+                                        <span class="badge bg-light text-dark border me-2">📍 Juhu Beach</span>
+                                        <span class="badge bg-light text-dark border me-2">🕔 5:00 AM - 10:00 PM</span>
+                                        <span class="badge bg-light text-dark border">👥 15,000+ Expected</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="event-card h-100 border-warning border-2">
+                            <div class="d-flex h-100">
+                                <div class="event-date-large me-4" style="background: linear-gradient(135deg, var(--brand-orange), var(--brand-orange-dark));">
+                                    <div class="date-number">27</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4 class="fw-bold">Day 3 - Sandhya Arghya ⭐</h4>
+                                    <p class="text-brand-orange fw-bold mb-2">Sunday, October 27, 2024</p>
+                                    <p class="text-secondary mb-3">The most spectacular day! Evening offerings to the setting sun with thousands of devotees creating an unforgettable spiritual atmosphere.</p>
+                                    <div class="mb-3">
+                                        <span class="badge bg-light text-dark border me-2">📍 Juhu Beach</span>
+                                        <span class="badge bg-light text-dark border me-2">🕓 4:00 PM - 8:00 PM</span>
+                                        <span class="badge bg-warning text-dark border">👥 50,000+ Expected</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="event-card h-100">
+                            <div class="d-flex h-100">
+                                <div class="event-date-large me-4">
+                                    <div class="date-number">28</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <div class="event-content">
+                                    <h4 class="fw-bold">Day 4 - Usha Arghya</h4>
+                                    <p class="text-brand-orange fw-bold mb-2">Monday, October 28, 2024</p>
+                                    <p class="text-secondary mb-3">Dawn offerings to the rising sun mark the festival's conclusion. Devotees break their 36-hour fast with blessed prasad.</p>
+                                    <div class="mb-3">
+                                        <span class="badge bg-light text-dark border me-2">📍 Juhu Beach</span>
+                                        <span class="badge bg-light text-dark border me-2">🌅 5:00 AM - 9:00 AM</span>
+                                        <span class="badge bg-light text-dark border">👥 45,000+ Expected</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pre-Festival Events -->
+        <section class="py-5 bg-white">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Pre-Festival Preparations</h2>
+                    <p class="lead text-secondary">Community events leading up to Chhath Puja</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="event-date-large mb-3" style="width: fit-content; margin: 0 auto;    border-radius: .75rem;">
+                                    <div class="date-number">15</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Community Preparation Meet</h5>
+                                <p class="text-secondary small mb-3">Final planning session for volunteers, safety protocols, and logistics coordination.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-light text-dark border small">🕕 6:00 PM</span>
+                                    <span class="badge bg-light text-dark border small">Community Hall</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="event-date-large mb-3" style="width: fit-content; margin: 0 auto;    border-radius: .75rem;">
+                                    <div class="date-number">20</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Ghat Preparation</h5>
+                                <p class="text-secondary small mb-3">Setting up the sacred ghats, safety installations, lighting, and infrastructure at Juhu Beach.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-light text-dark border small">🌅 6:00 AM</span>
+                                    <span class="badge bg-light text-dark border small">Juhu Beach</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="event-date-large mb-3" style="width: fit-content; margin: 0 auto;    border-radius: .75rem;">
+                                    <div class="date-number">24</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <h5 class="fw-bold text-center mb-3">Cultural Program</h5>
+                                <p class="text-secondary small mb-3">Traditional folk music and dance performances celebrating Chhath Puja heritage.</p>
+                                <div class="text-center">
+                                    <span class="badge bg-light text-dark border small">🕖 7:00 PM</span>
+                                    <span class="badge bg-light text-dark border small">Community Center</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post-Festival Events -->
+        <section class="py-5 bg-light">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Post-Festival Activities</h2>
+                    <p class="lead text-secondary">Continuing the community spirit</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 text-center">
+                                <div class="event-date-large mb-3" style="width: fit-content; margin: 0 auto;    border-radius: .75rem;">
+                                    <div class="date-number">30</div>
+                                    <div class="date-month">OCT</div>
+                                </div>
+                                <h5 class="fw-bold mb-3">Beach Cleanup Drive</h5>
+                                <p class="text-secondary small mb-3">Community-wide environmental restoration and cleanup activity at Juhu Beach.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-light text-dark border small">🌅 7:00 AM</span>
+                                    <span class="badge bg-light text-dark border small">2 hours</span>
+                                </div>
+                                <a href="contact.html" class="btn btn-outline-dark btn-sm rounded-pill">Volunteer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4 text-center">
+                                <div class="event-date-large mb-3" style="width: fit-content; margin: 0 auto;    border-radius: .75rem;">
+                                    <div class="date-number">02</div>
+                                    <div class="date-month">NOV</div>
+                                </div>
+                                <h5 class="fw-bold mb-3">Community Gratitude Meet</h5>
+                                <p class="text-secondary small mb-3">Celebration and appreciation event for all volunteers and community supporters.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-light text-dark border small">🕕 6:00 PM</span>
+                                    <span class="badge bg-light text-dark border small">Free Entry</span>
+                                </div>
+                                <a href="contact.html" class="btn btn-outline-dark btn-sm rounded-pill">Attend</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Guidelines -->
+        <section class="py-5 bg-white">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Festival Guidelines</h2>
+                    <p class="lead text-secondary">For a safe and meaningful celebration</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold text-brand-orange mb-3">
+                                    <i class="bi bi-shield-check-fill me-2"></i>
+                                    Safety Guidelines
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Follow designated entry and exit points</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Stay within marked safe zones in water</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Keep emergency contact numbers handy</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Report any emergency to volunteers</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Carry minimal valuables</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold text-brand-orange mb-3">
+                                    <i class="bi bi-leaf-fill me-2"></i>
+                                    Environmental Guidelines
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Use eco-friendly, biodegradable materials</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Avoid plastic decorations and containers</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dispose of waste in designated bins</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Participate in cleanup activities</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Respect marine life and water bodies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities & Services -->
+        <section class="py-5 bg-light">
+            <div class="container fade-in">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Available Facilities</h2>
+                    <p class="lead text-secondary">We provide comprehensive support for all devotees</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-heart-pulse-fill" style="font-size: 2rem; color: var(--brand-orange);"></i>
+                            </div>
+                            <h5 class="fw-bold">Medical Aid</h5>
+                            <p class="text-secondary small mb-0">24/7 medical stations with qualified doctors and ambulance services</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-shield-fill" style="font-size: 2rem; color: var(--brand-orange);"></i>
+                            </div>
+                            <h5 class="fw-bold">Security</h5>
+                            <p class="text-secondary small mb-0">Round-the-clock security personnel and crowd management</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-lightbulb-fill" style="font-size: 2rem; color: var(--brand-orange);"></i>
+                            </div>
+                            <h5 class="fw-bold">Lighting</h5>
+                            <p class="text-secondary small mb-0">Comprehensive lighting systems for safe navigation during early hours</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contribution-card text-center p-4 h-100">
+                            <div class="contribution-icon mb-3">
+                                <i class="bi bi-droplet-fill" style="font-size: 2rem; color: var(--brand-orange);"></i>
+                            </div>
+                            <h5 class="fw-bold">Clean Water</h5>
+                            <p class="text-secondary small mb-0">Drinking water stations and sanitation facilities throughout the venue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact for Events -->
+        <section class="py-5 bg-white">
+            <div class="container text-center fade-in">
+                <h2 class="display-6 fw-bold mb-4">Join the Celebration</h2>
+                <p class="lead text-secondary mb-5">Be part of Mumbai's grandest Chhath Puja celebration</p>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-auto">
+                        <a href="contact.html" class="btn btn-brand-orange btn-lg rounded-pill px-4">Volunteer Registration</a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="gallery.html" class="btn btn-dark-custom btn-lg rounded-pill px-4">View Past Events</a>
+                    </div>
+                    <div class="col-auto">
+                        <a href="blog.html" class="btn btn-outline-dark btn-lg rounded-pill px-4">Read Stories</a>
+                    </div>
+                </div>
+
+                <div class="row mt-5 g-4">
+                    <div class="col-lg-4">
+                        <div class="text-center">
+                            <i class="bi bi-telephone-fill text-brand-orange fs-3 mb-2"></i>
+                            <h6 class="fw-bold">Emergency Helpline</h6>
+                            <p class="text-secondary small">+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center">
+                            <i class="bi bi-envelope-fill text-brand-orange fs-3 mb-2"></i>
+                            <h6 class="fw-bold">Event Queries</h6>
+                            <p class="text-secondary small">events@chhathutsav.org</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center">
+                            <i class="bi bi-geo-alt-fill text-brand-orange fs-3 mb-2"></i>
+                            <h6 class="fw-bold">Location</h6>
+                            <p class="text-secondary small">Juhu Beach, Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-3">Chhath Utsav Mahasangh</h5>
+                    <p class="text-white-50">Preserving culture and serving the community since 1993.</p>
+                    <p class="text-white-50">Juhu Beach, Mumbai</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3" aria-label="Visit our Facebook page">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Visit our Instagram page">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white" aria-label="Visit our YouTube channel">
+                            <i class="bi bi-youtube fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white-50 text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white fw-bold mb-3">Festival 2024</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Oct 25 - Nahay Khay</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Oct 26 - Lohanda</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Oct 27 - Sandhya Arghya</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Oct 28 - Usha Arghya</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="text-white fw-bold mb-3">Our Location</h5>
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15081.990425983776!2d72.82299865!3d19.0857506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9165c589bb5%3A0x9d3cb343d6b3540!2sJuhu%20Beach!5e0!3m2!1sen!2sin!4v1725576503929!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="Location of Chhath Puja at Juhu Beach"
+                            class="rounded-3">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-secondary small">
+                <p>&copy; <span id="current-year">2024</span> Chhath Utsav Mahasangh. All Rights Reserved.</p>
+                <p class="mt-1">
+                    <a href="#" class="text-white-50 text-decoration-none">Terms of Service</a> | 
+                    <a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo and video gallery of Chhath Puja celebrations at Juhu Beach, Mumbai">
+    <title>Gallery - Chhath Utsav Mahasangh</title>
+
+    <!-- Core CSS (required for all pages) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/utilities.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/forms.css"> <!-- For search form -->
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Chhath Utsav Mahasangh</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="about-chhath.html">About Chhath</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-secondary btn-sm">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="hero">
+            <div class="container">
+                <h1>Festival Gallery</h1>
+                <p>Relive the beautiful moments from three decades of Chhath celebrations</p>
+            </div>
+        </section>
+
+        <!-- Gallery Stats -->
+        <section class="section">
+            <div class="container">
+                <div class="gallery-stats">
+                    <div class="gallery-stat">
+                        <span class="gallery-stat-number">5000+</span>
+                        <span class="gallery-stat-label">Photos Captured</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <span class="gallery-stat-number">500+</span>
+                        <span class="gallery-stat-label">Videos Recorded</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <span class="gallery-stat-number">30</span>
+                        <span class="gallery-stat-label">Years Documented</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <span class="gallery-stat-number">∞</span>
+                        <span class="gallery-stat-label">Memories Preserved</span>
+                    </div>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="search-container">
+                    <input type="search" class="search-input" placeholder="Search photos and videos...">
+                    <button class="search-btn" aria-label="Search">🔍</button>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Media</button>
+                    <button class="filter-btn" data-filter="photos">Photos</button>
+                    <button class="filter-btn" data-filter="videos">Videos</button>
+                    <button class="filter-btn" data-filter="2024">2024</button>
+                    <button class="filter-btn" data-filter="2023">2023</button>
+                    <button class="filter-btn" data-filter="ceremonies">Ceremonies</button>
+                    <button class="filter-btn" data-filter="devotees">Devotees</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Sections -->
+        <section class="section">
+            <div class="container">
+                <!-- 2024 Gallery -->
+                <div class="gallery-section">
+                    <h2 class="gallery-section-title">Chhath Puja 2024</h2>
+                    <p class="gallery-section-subtitle">Most recent celebration highlights</p>
+
+                    <div class="media-container">
+                        <div class="gallery" id="gallery-2024">
+                            <!-- Sample gallery items -->
+                            <div class="gallery-item" data-category="photos 2024 ceremonies">
+                                <img src="https://via.placeholder.com/400x300/ff6b35/ffffff?text=Sandhya+Arghya" alt="Devotees offering prayers to the setting sun" loading="lazy">
+                                <div class="media-type photo">Photo</div>
+                                <div class="media-overlay">
+                                    <div class="media-info">
+                                        <h3 class="media-title">Sandhya Arghya 2024</h3>
+                                        <p class="media-description">Devotees offering prayers to the setting sun</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" data-category="videos 2024 ceremonies">
+                                <video poster="https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Usha+Arghya" loading="lazy">
+                                    <source src="#" type="video/mp4">
+                                </video>
+                                <div class="media-type video">Video</div>
+                                <div class="play-button" aria-label="Play video"></div>
+                                <div class="media-overlay">
+                                    <div class="media-info">
+                                        <h3 class="media-title">Usha Arghya Ceremony</h3>
+                                        <p class="media-description">Beautiful sunrise ceremony video</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" data-category="photos 2024 devotees">
+                                <img src="https://via.placeholder.com/400x300/f7931e/ffffff?text=Devotees" alt="Multi-generational participation" loading="lazy">
+                                <div class="media-type photo">Photo</div>
+                                <div class="media-overlay">
+                                    <div class="media-info">
+                                        <h3 class="media-title">Family Participation</h3>
+                                        <p class="media-description">Multi-generational participation</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" data-category="photos 2024">
+                                <img src="https://via.placeholder.com/400x300/38a169/ffffff?text=Beach+Setup" alt="Beautifully decorated beach setup" loading="lazy">
+                                <div class="media-type photo">Photo</div>
+                                <div class="media-overlay">
+                                    <div class="media-info">
+                                        <h3 class="media-title">Festival Setup</h3>
+                                        <p class="media-description">Beautifully decorated beach setup</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 Gallery -->
+                <div class="gallery-section">
+                    <h2 class="gallery-section-title">Chhath Puja 2023</h2>
+                    <p class="gallery-section-subtitle">Memorable moments from last year</p>
+
+                    <div class="media-container">
+                        <div class="gallery" id="gallery-2023">
+                            <div class="gallery-item" data-category="photos 2023 devotees">
+                                <img src="https://via.placeholder.com/400x300/dc2626/ffffff?text=Devotees+2023" alt="Devotees in deep spiritual connection" loading="lazy">
+                                <div class="media-type photo">Photo</div>
+                                <div class="media-overlay">
+                                    <div class="media-info">
+                                        <h3 class="media-title">Spiritual Moments</h3>
+                                        <p class="media-description">Devotees in deep spiritual connection</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" data-category="photos 2023">
+                                <img src="https://via.placeholder.com/400x300/7c3aed/ffffff?text=Evening+Lights" alt="Beautiful lighting during evening prayers" loading="lazy">
+                                <div class="media-type photo">Photo</div>
+                                <div class="media-overlay">
+                                    <div class="media-info">
+                                        <h3 class="media-title">Evening Illumination</h3>
+                                        <p class="media-description">Beautiful lighting during evening prayers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+            <img class="lightbox-media" src="" alt="" id="lightbox-img">
+            <video class="lightbox-media hidden" controls id="lightbox-video">
+                <source src="" type="video/mp4">
+            </video>
+            <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chhath Utsav Mahasangh</h3>
+                    <p>Preserving sacred traditions through visual storytelling.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Gallery</h3>
+                    <ul>
+                        <li><a href="#gallery-2024">2024 Photos</a></li>
+                        <li><a href="#gallery-2023">2023 Archive</a></li>
+                        <li><a href="#videos">Video Gallery</a></li>
+                        <li><a href="contact.html">Submit Photos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chhath Utsav Mahasangh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top">↑</button>
+
+    <script>
+        // Gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            const lightboxClose = document.querySelector('.lightbox-close');
+            let currentItems = [];
+            let currentIndex = 0;
+
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category.includes(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox functionality
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    currentItems = Array.from(galleryItems).filter(item => 
+                        item.style.display !== 'none'
+                    );
+                    currentIndex = currentItems.indexOf(item);
+                    showLightbox(item);
+                });
+            });
+
+            function showLightbox(item) {
+                const img = item.querySelector('img');
+                const video = item.querySelector('video');
+
+                if (video) {
+                    lightboxImg.classList.add('hidden');
+                    lightboxVideo.classList.remove('hidden');
+                    lightboxVideo.src = video.querySelector('source').src;
+                } else {
+                    lightboxVideo.classList.add('hidden');
+                    lightboxImg.classList.remove('hidden');
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                }
+
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+                lightboxVideo.pause();
+            }
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    currentIndex--;
+                    showLightbox(currentItems[currentIndex]);
+                }
+                if (e.key === 'ArrowRight' && currentIndex < currentItems.length - 1) {
+                    currentIndex++;
+                    showLightbox(currentItems[currentIndex]);
+                }
+            });
+
+            // Navigation buttons
+            document.querySelector('.lightbox-prev').addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showLightbox(currentItems[currentIndex]);
+                }
+            });
+
+            document.querySelector('.lightbox-next').addEventListener('click', () => {
+                if (currentIndex < currentItems.length - 1) {
+                    currentIndex++;
+                    showLightbox(currentItems[currentIndex]);
+                }
+            });
+
+            // Mobile menu toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle?.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Back to top
+            const backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop?.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
